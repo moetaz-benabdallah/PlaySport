@@ -8,8 +8,8 @@ angular.module('myApp.Grounds', ['ngRoute'])
         loadGrounds();
 
         function loadGrounds(){
-            EventsFactory.grounds().success(function (response) {
-                console.log(response[0]);
+            GroundsFactory.grounds().success(function (response) {
+                //console.log(response[0]);
                 $scope.grounds = response;
             });
         }

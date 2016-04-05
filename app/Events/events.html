@@ -506,32 +506,21 @@
                             <!-- End Info-->
 
                             <!-- Locations -->
-                            <div class="panel-box">
+                            <div class="panel-box" ng-controller="GroundsCtrl">
 
                                 <div class="titles">
                                     <h4>Locations</h4>
                                 </div>
+
+
                                 <!-- Locations Carousel -->
                                 <ul class="single-carousel">
-                                    <li>
+
+                                    <li ng-repeat="ground in grounds">
                                         <img src="img/blog/1.jpg" alt="" class="img-responsive">
                                         <div class="info-single-carousel">
-                                            <h4>Rio de Janeiro</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip consectetur adipisicing elit ex.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/blog/2.jpg" alt="" class="img-responsive">
-                                        <div class="info-single-carousel">
-                                            <h4>Brazilia</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip consectetur adipisicing elit ex.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/blog/3.jpg" alt="" class="img-responsive">
-                                        <div class="info-single-carousel">
-                                            <h4>Sao Paulo</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip consectetur adipisicing elit ex.</p>
+                                            <h4>{{ground.name}}</h4>
+                                            <p>{{ground.description}}</p>
                                         </div>
                                     </li>
                                 </ul>
