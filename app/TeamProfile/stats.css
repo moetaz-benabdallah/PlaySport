@@ -1,0 +1,76 @@
+/* Skill SECTION    
+----------------------------------------------------- */
+
+
+.skills-section {
+    /* background:  url(../../images/office.jpg) ;*/
+    color: #fff;   
+}
+.skills-section .section-title{
+    color: #fff;
+    margin-bottom: 110px;  
+}
+.skills-section .section-title h2{
+    color: #fff;
+}
+.skill-title {
+    width: 25%;
+    float: left;
+}
+.skill-title h3{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: -6px;
+    text-transform: capitalize;
+}
+
+
+
+/* progress-bar */
+
+.skill-progress {
+    position: relative;
+}
+.progress {
+    height: 10px;
+    margin-bottom: 40px;
+    background-color: #3a4149;
+    border-radius: 3px;
+    box-shadow: none;
+    width: 75%;
+}
+
+.progress-bar {
+    background-color:coral;
+}
+.progress-bar span{
+    position: absolute;
+    top: -20px;
+    right: 15px;
+}
+
+.progress .progress-bar.six-sec-ease-in-out {
+  -webkit-transition: width 2s ease-in-out;
+  -moz-transition: width 2s ease-in-out;
+  -o-transition: width 2s ease-in-out;
+  transition:  width 2s ease-in-out;
+}
+
+
+.skill-chart h3 {
+    margin-top: 20px;
+}
+
+.our-progress{
+    margin:10px 0 30px;
+}
+
+.progress-percent{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our-progress h3{
+    font-weight: 400;
+    margin-bottom: 5px;
+}
