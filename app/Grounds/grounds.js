@@ -9,7 +9,7 @@ angular.module('myApp.Grounds', ['ngRoute'])
 
         function loadGrounds(){
             GroundsFactory.grounds().success(function (response) {
-                //console.log(response[0]);
+                console.log(response);
                 $scope.grounds = response;
             });
         }
