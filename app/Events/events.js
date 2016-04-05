@@ -9,6 +9,7 @@ angular.module('myApp.Events', ['ngRoute'])
 
     function loadEvents(){
         EventsFactory.events().success(function (response) {
+            console.log(response[0].date);
             $scope.events = response;
         });
     }

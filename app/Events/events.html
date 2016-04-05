@@ -298,7 +298,7 @@
 
 
 
-                    {{events}}
+
 
                 <div class="semiboxshadow text-center">
                     <img src="img/img-theme/shp.png" class="img-responsive" alt="">
@@ -317,8 +317,8 @@
                                     <li class="col-xs-6 col-sm-6 col-md-4" ng-repeat="event in events">
                                         <div class="header-post">
                                             <div class="date">
-                                                <span>08/jan</span>
-                                                2014
+                                                <span>{{event.date | date:'M/d/yyyy HH:mm:ss'}}</span>
+
                                             </div>
                                             <a href="single-news.html"><img src="img/blog/1.jpg" alt=""></a>
                                             <div class="meta-tag">

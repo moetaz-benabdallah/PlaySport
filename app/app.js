@@ -5,9 +5,11 @@ angular.module('myApp', [
     'ngRoute',
     'myApp.Home',
     'myApp.Events',
+    'myApp.Grounds',
     'myApp.version',
     'myApp.teamProfile',
-    'myApp.eventsServices'
+    'myApp.eventsServices',
+    'myApp.groundsServices'
 ]).
 config(['$routeProvider', function($routeProvider) {
 
