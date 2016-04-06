@@ -1,0 +1,76 @@
+// Reset and Clean
+HTML, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font: {
+    family: Roboto, sans-serif;
+  }
+}
+
+figure {
+  margin: 0;
+  img {
+    padding: 0;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+// Framework
+.centralize-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marker {
+  color: #000;
+  background-color: rgba(#fff, .5);
+}
+
+.fluid-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  .list-item {
+    margin: 25px;
+  }
+}
+
+// Style
+.gallery-comment {
+  width: 240px;
+  border: 1px solid black;
+
+  h1 {
+    margin-left: 25px;
+  }
+
+  .photo-comment {
+    min-height: 120px;
+    background: {
+      position: center, center top;
+      repeat: no-repeat, no-repeat;
+      size: auto 100%, cover;
+    }
+
+    p {
+      padding: 10px;
+    }
+  }
+}
