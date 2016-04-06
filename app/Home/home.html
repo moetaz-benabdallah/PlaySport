@@ -380,34 +380,21 @@
                         <!-- content Sidebar Center -->
                         <aside class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                             <!-- Locations -->
-                            <div class="panel-box">
+                            <div class="panel-box" ng-controller="GroundsCtrl">
 
                                 <div class="titles">
                                     <h4>Sport Grounds</h4>
                                 </div>
                                 <!-- Locations Carousel -->
                                 <ul class="single-carousel">
-                                    <li>
-                                        <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                                    <li ng-repeat="ground in grounds">
+                                        <img src="http://localhost:3000/uploads/{{ground.picture}}" alt="" class="img-responsive">
                                         <div class="info-single-carousel">
-                                            <h4>Rio de Janeiro</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cillum dolore eu fugiat nulla pariatur.</p>
+                                            <h4>{{ground.name}}</h4>
+                                            <p>{{ground.description}}</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <img src="img/blog/2.jpg" alt="" class="img-responsive">
-                                        <div class="info-single-carousel">
-                                            <h4>Brazilia</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cillum dolore eu fugiat nulla pariatur.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/blog/3.jpg" alt="" class="img-responsive">
-                                        <div class="info-single-carousel">
-                                            <h4>Sao Paulo</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cillum dolore eu fugiat nulla pariatur.</p>
-                                        </div>
-                                    </li>
+
                                 </ul>
                                 <!-- Locations Carousel -->
                             </div>
