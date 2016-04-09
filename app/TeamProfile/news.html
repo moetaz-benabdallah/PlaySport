@@ -5,3 +5,11 @@ angular.module('myApp.news', ['ngRoute','ngResource'])
    { remove: { method: "DELETE", url: "http://localhost:4000/tweeter/deletenews/:id" },
       update: { method: 'PUT',url : "http://localhost:4000/tweeter/updatenews/:id" }
        });
+       .controller('newsCtrl', function($scope, News,$http,$route) {
+           $scope.newsData = {};
+	       $scope.newNews = function() {
+	             
+		         var news = new News($scope.newsData);
+			     news.$save();
+			         $route.reload();  
+				   }  });
