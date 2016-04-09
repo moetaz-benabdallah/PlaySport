@@ -119,6 +119,11 @@ config(['$routeProvider', function($routeProvider) {
                 templateUrl:'Invitations/invitations.html',
                 controller: ''
             })
+            
+            .when('/teamProfile/news',{
+                templateUrl:'TeamProfile/news.html',
+                controller: 'newsCtrl'
+            })
      
             .when('/login',{
                 templateUrl:'User/login.html'
