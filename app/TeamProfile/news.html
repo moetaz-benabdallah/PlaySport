@@ -1,0 +1,7 @@
+angular.module('myApp.news', ['ngRoute','ngResource'])
+
+.factory('News',function($resource) {
+  return $resource('http://localhost:4000/tweeter/news',{id:'@id'},
+   { remove: { method: "DELETE", url: "http://localhost:4000/tweeter/deletenews/:id" },
+      update: { method: 'PUT',url : "http://localhost:4000/tweeter/updatenews/:id" }
+       });
