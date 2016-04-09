@@ -1,0 +1,150 @@
+
+<!-- Section Title -->           
+            <section class="section-title img-contact">
+                <div class="overlay-bg"></div>
+                <div class="container">
+                    <h1>Find Games</h1>
+                </div>
+            </section>
+            <!-- End Section Title --> 
+
+            <!-- Section Area - Content Central -->
+            <section class="content-info">
+
+                <div class="crumbs">
+                    <div class="container">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>/</li>
+                            <li><a href="#">Pages</a></li>
+                            <li>/</li>
+                            <li>Find a Game nearby</li>                                       
+                        </ul>
+                    </div>        
+                </div>
+
+                <div class="semiboxshadow text-center">
+                    <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+                </div>
+
+                <!-- Google Map --> 
+                <!--<div id="map"></div>-->
+                <div id="map" data-tap-disabled="true">
+                </div>                     
+                <!-- End Google Map --> 
+
+                <!-- Content Central -->
+                <section class="container">
+                    <div class="row padding-top"> 
+                        <!-- Left Content -->
+                        <div class="col-md-4">
+                            <aside class="panel-box">
+                                <div class="titles">
+                                    <h4>Nearest games</h4>
+                                </div>
+                                <address>
+                                  <strong>Sports Cup, Inc.</strong><br>
+                                  <i class="fa fa-map-marker"></i><strong>Football Game </strong> Tunis, Rades<br>
+                                  <i class="fa fa-plane"></i><strong>Volleyball Game </strong>Tunis, Bardo<br>
+                                  <i class="fa fa-phone"></i><strong>Basketball Game </strong>Tunis, Nabeul
+                                </address>
+                            </aside>
+
+                            <aside class="panel-box">
+                                <div class="titles">
+                                    <h4>Playing Games</h4>
+                                </div>
+                                <address>
+                                  <i class="fa fa-envelope"></i><strong>2-1</strong><a href="mailto:#"> Esprit vs Sesame</a><br>
+                                  <i class="fa fa-envelope"></i><strong>0-0</strong><a href="mailto:#"> SupCom vs Insat</a>
+                                </address>
+                            </aside>
+                        </div>
+                        <!-- End Left Content -->
+
+                        <!-- Right Content -->
+                        <div class="col-md-8">
+                            <div class="panel-box">
+                                <div class="titles">
+                                    <h4>Contact Form</h4>
+                                </div>
+                                <!-- Form Contact -->
+                                <form class="form-theme" action="php/send-mail.php">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-6">
+                                                <label>Your name *</label>
+                                                <input type="text"  required="required" value="" maxlength="100" class="form-control" name="Name" id="name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Your email address *</label>
+                                                <input type="email"  required="required" value="" maxlength="100" class="form-control" name="Email" id="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label>Comment *</label>
+                                                <textarea maxlength="5000" rows="10" class="form-control" name="message"  style="height: 138px;" required="required" ></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+<!--
+                                            <input type="submit" value="Join the game" class="btn btn-lg btn-primary">
+-->
+                                            <a class="btn btn-lg btn-primary" href="#/waiting">Join the game</a>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- End Form Contact --> 
+                                <div class="result"></div>
+                            </div>
+                        </div> 
+                        <!-- End Right Content -->         
+                    </div>    
+                </section>
+                <!-- End Content Central -->
+
+                <!-- Newsletter -->
+                <div class="section-wide">
+                    <div class="container">
+                        <div class="row newsletter">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <h2>Enter your e-mail and <span class="text-resalt">subscribe</span> to our newsletter.</h2>
+                                    <p>Duis non lorem porta,  eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat.</p>
+                                </div>
+                                <form id="newsletterForm" action="php/mailchip/newsletter-subscribe.php">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                                <input class="form-control" placeholder="Your Name" name="name"  type="text" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                                <input class="form-control" placeholder="Your  Email" name="email"  type="email" required="required">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-primary" type="submit" name="subscribe" >SIGN UP</button>
+                                                 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>   
+                                <div id="result-newsletter"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <!-- End Newsletter -->  
+            </section>
+            <!-- End Section Area - Content Central -->
