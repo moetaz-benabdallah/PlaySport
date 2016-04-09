@@ -8,6 +8,7 @@ angular.module('myApp', [
     'myApp.Grounds',
     'myApp.version',
     'myApp.teamProfile',
+    'myApp.news',
     'myApp.eventsServices',
     'myApp.groundsServices',
     'myApp.FindGame'
