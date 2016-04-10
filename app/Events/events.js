@@ -3,18 +3,24 @@
 angular.module('myApp.Events', ['ngRoute'])
 
 
-.controller('EventsCtrl', function($scope, EventsFactory) {
+.controller('EventsCtrl', function($scope, EventsFactory, $routeParams) {
+
+    $scope.event = {};
+
+    if($routeParams.idEvent != null){
+        var idEvent = $routeParams.idEvent;
+        EventsFactory.getEvent(idEvent).success(function (event) {
+            $scope.event = event[0];
+            console.log(event[0]);
+        });
+    }
 
     loadEvents();
 
     function loadEvents(){
         EventsFactory.events().success(function (response) {
-
-            for(var i = 0; i < response.length; i++){
-                console.log(response[i].groundID);
-            }
-
             $scope.events = response;
         });
     }
 });
+
