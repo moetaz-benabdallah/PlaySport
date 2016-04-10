@@ -81,6 +81,11 @@ config(['$routeProvider', function($routeProvider) {
                  controller: 'EventsCtrl'
              })
 
+             .when('/owner',{
+                 templateUrl:'Events/groundOwnerProfile.html',
+                 controller: 'EventsCtrl'
+             })
+
             .when('/success',{
                 templateUrl:'Events/success.html',
                 controller: ''
