@@ -11,7 +11,6 @@ angular.module('myApp.Events', ['ngRoute'])
     if($routeParams.idEvent != null){
         EventsFactory.getEvent($routeParams.idEvent).success(function (event) {
             $scope.event = event[0];
-            //alert(event[0].groundID);
             GroundsFactory.getGround(event[0].groundID).success(function (ground) {
                 $scope.ground = ground;
             });
@@ -22,6 +21,12 @@ angular.module('myApp.Events', ['ngRoute'])
 
     function loadEvents(){
         EventsFactory.events().success(function (response) {
+
+            for(var i = 0; i < response.length; i++){
+                var date = new Date(response[i].date);
+                console.log(date);
+            }
+
             $scope.events = response;
         });
     }
