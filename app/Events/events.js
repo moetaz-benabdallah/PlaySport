@@ -3,15 +3,18 @@
 angular.module('myApp.Events', ['ngRoute'])
 
 
-.controller('EventsCtrl', function($scope, EventsFactory, $routeParams) {
+.controller('EventsCtrl', function($scope, EventsFactory, $routeParams, GroundsFactory) {
 
     $scope.event = {};
+    $scope.ground = {};
 
     if($routeParams.idEvent != null){
-        var idEvent = $routeParams.idEvent;
-        EventsFactory.getEvent(idEvent).success(function (event) {
+        EventsFactory.getEvent($routeParams.idEvent).success(function (event) {
             $scope.event = event[0];
-            console.log(event[0]);
+            //alert(event[0].groundID);
+            GroundsFactory.getGround(event[0].groundID).success(function (ground) {
+                $scope.ground = ground;
+            });
         });
     }
 

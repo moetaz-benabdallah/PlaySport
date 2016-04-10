@@ -142,11 +142,52 @@
                         <!-- content Column Left -->
                         <div class="col-md-8">
 
-                            <div class="row">
-                                <!-- blog post-->
-                               {{event}}
-                                <!-- End blog post-->
+
+
+
+                            <!-- Comment Form -->
+                            <div class="panel-box">
+                                <!-- Title Post -->
+                                <div class="titles">
+                                    <h4>{{event.name}}</h4>
+                                    <h5 style="margin-left: 600px; margin-top: -35px;">{{event.date | date:'M/d/yyyy HH:mm:ss'}}</h5>
+                                </div>
+                                <div class="row">
+
+                                    <img src="http://localhost:3000/uploads/{{ground.picture}}"
+                                         style="height: 300px; width: 749px;">
+
+                                    <br>
+
+                                    <p>{{event.description}}</p>
+
+                                    <br>
+
+                                    <strong>Price: </strong> {{event.price}} TND
+
+
+
+                                    <form class="form-theme">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <input type="submit" value="Join event" class="btn btn-primary">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- End Form coment -->
+                                </div>
                             </div>
+                            <!-- End Comment Form -->
+
+
+
+
+
+
+
+
+
+
 
                             <!-- Experts -->
                             <div class="panel-box">
