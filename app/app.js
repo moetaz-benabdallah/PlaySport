@@ -81,7 +81,7 @@ config(['$routeProvider', function($routeProvider) {
                  controller: 'EventsCtrl'
              })
 
-             .when('/owner',{
+             .when('/ownerProfile',{
                  templateUrl:'Events/groundOwnerProfile.html',
                  controller: 'EventsCtrl'
              })
