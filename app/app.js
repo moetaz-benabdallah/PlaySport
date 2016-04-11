@@ -141,5 +141,23 @@ config(['$routeProvider', function($routeProvider) {
                 templateUrl:'User/signup.html'
             })
 
+     //espace arbitre
+            .when('/referee',{
+                templateUrl:'Referee/referee.html',
+                controller: 'RefereeCtrl'
+            })
+     //espace arbitre---Article Space
+            .when('/article',{
+                templateUrl:'Referee/article.html',
+                controller: 'ArticleCtrl'
+            })
+
+     //espace arbitre---TimeLine
+            .when('/timeline',{
+                templateUrl:'Referee/timeline.html',
+                controller: 'TimelineCtrl'
+            })
+
+
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
