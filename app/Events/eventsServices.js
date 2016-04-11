@@ -8,6 +8,14 @@ services.factory('EventsFactory', ['$http', function ($http){
         return $http.get('http://localhost:3000/events');
     };
 
+    dataFactory.getEvent = function (idEvent){
+        return $http.get('http://localhost:3000/events/'+idEvent);
+    };
+
+    dataFactory.addEvent = function (event) {
+        return $http.post('http://localhost:3000/events/newEvent', event);
+    };
+
     return dataFactory;
 
 }]);

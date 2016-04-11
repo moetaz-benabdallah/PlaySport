@@ -8,6 +8,10 @@ services.factory('GroundsFactory', ['$http', function ($http){
         return $http.get('http://localhost:3000/grounds/grounds');
     };
 
+    dataFactory.getGround = function (idGround){
+        return $http.get('http://localhost:3000/grounds/show/'+idGround);
+    };
+
     return dataFactory;
 
 }]);
