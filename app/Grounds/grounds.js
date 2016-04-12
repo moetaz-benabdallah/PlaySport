@@ -2,9 +2,20 @@
 
 angular.module('myApp.Grounds', ['ngRoute'])
 
-.controller('GroundsCtrl', function($scope, GroundsFactory, EventsFactory) {
+.controller('GroundsCtrl', function($scope, GroundsFactory, EventsFactory, $routeParams) {
+
+    $scope.postImage = function (id) {
+        return 'http://localhost:3000/grounds/show/' + id;
+    };
 
         $scope.groundNew = {};
+        $scope.ground = {};
+
+        if($routeParams.idGround != null){
+            GroundsFactory.getGround($routeParams.idGround).success(function (ground) {
+                $scope.ground = ground;
+            });
+        }
 
         loadGrounds();
         function loadGrounds(){

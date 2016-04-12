@@ -14,6 +14,8 @@ angular.module('myApp.Events', ['ngRoute'])
         EventsFactory.getEvent($routeParams.idEvent).success(function (event) {
             $scope.event = event[0];
             GroundsFactory.getGround(event[0].groundID).success(function (ground) {
+                console.log('test');
+                console.log(ground);
                 $scope.ground = ground;
             });
         });

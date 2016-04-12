@@ -149,10 +149,10 @@
                                                 <span>{{ground.location}}</span>
 
                                             </div>
-                                            <a ng-if="ground.picture != '' " href="single-news.html">
+                                            <a ng-if="ground.picture != '' " href="#/groundDetails/{{ground._id}}">
                                                 <img src="http://localhost:3000/uploads/{{ground.picture}}" alt="">
                                             </a>
-                                            <a ng-if="ground.picture == ''" href="single-news.html">
+                                            <a ng-if="ground.picture == ''" href="#/groundDetails/{{ground._id}}">
                                                 <img src="http://localhost:3000/uploads/no-img.png" alt="">
                                             </a>
                                             <div class="meta-tag">

@@ -47,6 +47,11 @@ config(['$routeProvider', function($routeProvider) {
                 controller: 'GroundsCtrl'
             })
 
+             .when('/groundDetails/:idGround',{
+                 templateUrl:'Grounds/groundDetails.html',
+                 controller: 'GroundsCtrl'
+             })
+
             .when('/ground/details',{
                 templateUrl:'Grounds/ground-details.html',
                 controller: ''
