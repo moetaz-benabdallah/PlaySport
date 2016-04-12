@@ -401,7 +401,7 @@
      var socket = io('http://localhost:3000');
 
      socket.on('notificationEvent', function (data) {
-         alert('New event added!!!!');
+         alert('Event '+data.name+' added');
          console.log(data);
      })
 

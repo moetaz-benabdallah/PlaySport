@@ -12,6 +12,10 @@ services.factory('GroundsFactory', ['$http', function ($http){
         return $http.get('http://localhost:3000/grounds/show/'+idGround);
     };
 
+    dataFactory.addGround = function (ground){
+        return $http.post('http://localhost:3000/grounds/newground', ground );
+    };
+
     return dataFactory;
 
 }]);

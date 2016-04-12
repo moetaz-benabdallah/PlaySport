@@ -110,7 +110,7 @@
             <section class="section-title img-about">
                 <div class="overlay-bg"></div>
                 <div class="container">
-                    <h1>Events Section</h1>
+                    <h1>Owner ground profile</h1>
                 </div>
             </section>
             <!-- End Section Title -->
@@ -123,7 +123,7 @@
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li>/</li>
-                            <li>Events Section</li>
+                            <li>My Grounds</li>
                         </ul>
                     </div>
                 </div>
@@ -146,8 +146,36 @@
                                 <!-- blog post-->
 
 
-                                some code
+                                <ul class="events-carousel events-no-carousel">
+                                    <!-- Item blog post -->
+                                    <li ng-repeat="ground in grounds" class="col-xs-6 col-sm-6 col-md-4">
+                                        <div class="header-post">
+                                            <div class="date">
+                                                <span>{{ground.location}}</span>
 
+                                            </div>
+                                            <a ng-if="ground.picture != '' " href="single-news.html">
+                                                <img src="http://localhost:3000/uploads/{{ground.picture}}" alt="">
+                                            </a>
+                                            <a ng-if="ground.picture == ''" href="single-news.html">
+                                                <img src="http://localhost:3000/uploads/no-img.png" alt="">
+                                            </a>
+                                            <div class="meta-tag">
+                                                <ul>
+                                                    <li ng-if="ground.is_available == 1"><i class="fa fa-user"></i><a href="#">Available</a></li>
+                                                    <li ng-if="ground.is_available == 0"><i class="fa fa-user"></i><a href="#">Not Available</a></li>
+                                                    <li><i class="fa fa-folder-open"></i><a href="#">{{ground.type}}</a></li>
+                                                    <li class="text-right"><i class="fa fa-comment"></i><a href="#">10</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="info-post">
+                                            <h4><a href="ground-details.html">{{ground.name}}</a></h4>
+                                            <p>{{ground.description}}</p>
+                                        </div>
+                                    </li>
+
+                                </ul>
 
 
 
@@ -157,66 +185,87 @@
                             <!-- Experts -->
                             <div class="panel-box">
                                 <div class="titles">
-                                    <h4>Sports Experts</h4>
+                                    <h4>New Ground</h4>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-                                        <div class="box-info">
-                                            <img src="img/experts/1.png" alt="" class="img-responsive">
-                                            <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p class="date-box">Abril 15, 2014</p>
+                                <div ng-controller="GroundsCtrl" class="row">
+
+
+
+                                    <form class="form-theme">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Ground name *</label>
+                                                    <input type="text"  required="required" value="" ng-model="groundNew.name" maxlength="100" class="form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Location *</label>
+                                                    <input type="text"  required="required" value="" ng-model="groundNew.location" maxlength="100" class="form-control">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-                                        <div class="box-info">
-                                            <img src="img/experts/2.png" alt="" class="img-responsive">
-                                            <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p class="date-box">Abril 15, 2014</p>
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Type *</label>
+                                                    <select ng-model="groundNew.type" class="form-control">
+                                                        <option value="football">Football</option>
+                                                        <option value="tennis">Tennis</option>
+                                                        <option value="basketball">Basketball</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-3">
+                                                    <label>Available *</label>
+                                                    <input type="radio" ng-model="groundNew.is_available" name="is_available" value="1">
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label>Not available *</label>
+                                                    <input type="radio" ng-model="groundNew.is_available" name="is_available" value="0">
+                                                </div>
+                                            </div>
+
+
                                         </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-                                        <div class="box-info">
-                                            <img src="img/experts/3.png" alt="" class="img-responsive">
-                                            <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p class="date-box">Abril 15, 2014</p>
+
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-3">
+                                                    <label>Day</label>
+                                                    <input type="checkbox" ng-model="groundNew.day" name="day" value="1">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label>Night</label>
+                                                    <input type="checkbox" ng-model="groundNew.night" name="night" value="1">
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-                                        <div class="box-info">
-                                            <img src="img/experts/4.png" alt="" class="img-responsive">
-                                            <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p class="date-box">Abril 15, 2014</p>
+
+
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    <label>Description *</label>
+                                                    <textarea maxlength="5000" rows="10" class="form-control" ng-model="eventNew.description" name="description" style="height: 138px;" required="required" ></textarea>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-                                        <div class="box-info">
-                                            <img src="img/experts/5.png" alt="" class="img-responsive">
-                                            <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p class="date-box">Abril 15, 2014</p>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button type="submit" ng-click="newGround()" class="btn btn-primary">Post Ground</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-                                        <div class="box-info">
-                                            <img src="img/experts/3.png" alt="" class="img-responsive">
-                                            <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p class="date-box">Abril 15, 2014</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-                                        <div class="box-info">
-                                            <img src="img/experts/4.png" alt="" class="img-responsive">
-                                            <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p class="date-box">Abril 15, 2014</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-4 col-lg-3">
-                                        <div class="box-info">
-                                            <img src="img/experts/1.png" alt="" class="img-responsive">
-                                            <h5 class="entry-title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                            <p class="date-box">Abril 15, 2014</p>
-                                        </div>
-                                    </div>
+                                    </form>
+
+
+
+
 
                                 </div>
                             </div>
