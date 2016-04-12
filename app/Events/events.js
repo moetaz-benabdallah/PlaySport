@@ -9,7 +9,6 @@ angular.module('myApp.Events', ['ngRoute'])
     $scope.ground = {};
 
     $scope.eventNew = {};
-    $scope.dateEvent = 0;
 
     if($routeParams.idEvent != null){
         EventsFactory.getEvent($routeParams.idEvent).success(function (event) {
@@ -34,10 +33,21 @@ angular.module('myApp.Events', ['ngRoute'])
         });
     }
 
+    loadGrounds();
+    function loadGrounds(){
+        GroundsFactory.grounds().success(function (response) {
+            //console.log(response);
+            $scope.grounds = response;
+        });
+    }
+
 
     $scope.newEvent = function () {
-
-        alert($scope.dateEvent);
+        var event = $scope.eventNew;
+        EventsFactory.addEvent(event).success(function (response) {
+            //console.log(response);
+            //alert('New Event added!');
+        });
     };
 });
 
