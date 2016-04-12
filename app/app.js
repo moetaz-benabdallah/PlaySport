@@ -11,6 +11,8 @@ angular.module('myApp', [
     'myApp.news',
     'myApp.eventsServices',
     'myApp.groundsServices',
+    'myApp.referee',
+    'myApp.refereeSuggServices',
     'myApp.FindGame'
 
 ]).
@@ -34,7 +36,7 @@ config(['$routeProvider', function($routeProvider) {
 
             .when('/gallery',{
                 templateUrl:'Gallery/gallery.html',
-                controller: ''
+                controller: 'RefereeCtrl'
             })
 
             .when('/news',{
@@ -113,6 +115,24 @@ config(['$routeProvider', function($routeProvider) {
                 controller: 'TimelineCtrl'
             })
 
+            // les suggestions
+            .when('/sugg',{
+                templateUrl:'Referee/suggestion.html',
+                controller:'SuggCtrl'
+            })
+
+     // les suggestions accepté
+            .when('/suggA',{
+                templateUrl:'Referee/suggestionAcc.html',
+                controller:'SuggACtrl'
+            })
+
+     // les suggestions refusé
+            .when('/suggR',{
+                templateUrl:'Referee/suggestionRef.html',
+                controller:'SuggRCtrl'
+            })
+
             .when('/stats',{
                 templateUrl:'Stats/stats.html',
                 controller: 'statsCtrl'
@@ -141,22 +161,7 @@ config(['$routeProvider', function($routeProvider) {
                 templateUrl:'User/signup.html'
             })
 
-     //espace arbitre
-            .when('/referee',{
-                templateUrl:'Referee/referee.html',
-                controller: 'RefereeCtrl'
-            })
-     //espace arbitre---Article Space
-            .when('/article',{
-                templateUrl:'Referee/article.html',
-                controller: 'ArticleCtrl'
-            })
 
-     //espace arbitre---TimeLine
-            .when('/timeline',{
-                templateUrl:'Referee/timeline.html',
-                controller: 'TimelineCtrl'
-            })
 
 
   $routeProvider.otherwise({redirectTo: '/home'});
