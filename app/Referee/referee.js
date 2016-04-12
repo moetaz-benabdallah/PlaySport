@@ -13,4 +13,8 @@ angular.module('myApp.Referee', ['ngRoute'])
 
 .controller('TimelineCtrl', [function() {
 
+}])
+
+.controller('SuggCtrl', [function() {
+
 }]);
