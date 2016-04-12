@@ -80,32 +80,85 @@
 
 <!--                                  Les Photos partagés     -->
 <div class="col-md-8">
-
+                           <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
                             <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">4</div>
+                                    <div>Suggestions</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/sugg">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">12</div>
+                                    <div>Match Nearly </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-                                               <ul class="fluid-list">
-  <li class="list-item gallery-comment">
-    <h1>Match 1</h1>
-    <figure class="photo-comment centralize-child" style="background-image:url('http://loremflickr.com/240/480?random=1'), url('http://loremflickr.com/240/480?random=1')">
-      <p class="marker">Nice match .</p>
-    </figure>
-  </li>
-  <li class="list-item gallery-comment">
-    <h1>Mourouj Match</h1>
-    <figure class="photo-comment centralize-child" style="background-image:url('http://loremflickr.com/240/480?random=2'), url('http://loremflickr.com/240/480?random=2')">
-      <p class="marker">Nice guys !! </p>
-    </figure>
-  </li>
-  <li class="list-item gallery-comment">
-    <h1>Crazy Match</h1>
-    <figure class="photo-comment centralize-child" style="background-image:url('http://loremflickr.com/240/480?random=3'), url('http://loremflickr.com/240/480?random=3')">
-      <p class="marker">It's rearly a crazy party.</p>
-    </figure>
-  </li>
 
-</ul>
+            </div>
 
-    </div></div>
+                          <ul class="events-carousel events-no-carousel" ng-repeat="insta in instaLiked">
+
+                                    <!-- Item blog post -->
+                                    <li class="col-xs-6 col-sm-6 col-md-4">
+                                        <div class="header-post">
+                                            <div class="date">
+                                                <span>08/jan</span>
+                                                2014
+                                            </div>
+                                            <a href="single-news.html"><img src="{{insta.images.standard_resolution.url}}" alt=""></a>
+                                            <div class="meta-tag">
+                                                <ul>
+                                                    <li><i class="fa fa-user"></i><a href="#">{{insta.user.full_name}}</a></li>
+                                                    <li><i class="fa fa-folder-open"></i><a href="#">{{insta.tags}}</a></li>
+                                                    <li class="text-right"><i class="fa fa-comment"></i><a href="#">{{insta.likes.count}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="info-post">
+                                            <h4><a href="ground-details.html">{{insta.location.name}}</a></h4>
+                                            <p>{{insta.caption.text}}</p>
+                                        </div>
+                                    </li>
+                                    <!-- End Item blog post -->
+ </ul>
+                           </div>
+
+<!--                           Les postes d'instagram liké et suivi -->
+
+<!--                           FIN instagram liké et suivi -->
 
 
                                                     <!--Les matchs Proches qu'il peut en suggérer -->
