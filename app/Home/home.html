@@ -5,7 +5,7 @@
             <!-- Slide -->           
             <section class="camera_wrap camera_white_skin" id="slide">
                 <!-- Item Slide - Caption --> 
-                <div  data-src="img/slide/slides/1.jpg">
+                <div  data-src="img/slide/slides/1.jpg?1461597735539">
                     <div class="style-caption fadeFromTop">
                         <div class="overlay-bg"></div>
                          <div class="container"> 
@@ -26,7 +26,7 @@
                 <!-- End Item Slide - Caption  -->
 
                 <!-- Item Slide - Caption --> 
-                <div  data-src="img/slide/slides/2.jpg">
+                <div  data-src="img/slide/slides/2.jpg?1461596643994">
                     <div class="style-caption fadeFromTop">
                         <div class="overlay-bg"></div>
                          <div class="container"> 
@@ -47,7 +47,7 @@
                 <!-- End Item Slide - Caption  -->
 
                 <!-- Item Slide - Caption --> 
-                <div  data-src="img/slide/slides/3.jpg">
+                <div  data-src="img/slide/slides/3.jpg?1461597769744">
                     <div class="style-caption fadeFromTop">
                         <div class="overlay-bg"></div>
                          <div class="container"> 
@@ -86,65 +86,66 @@
                                 <li class="active"><a href="#home" data-toggle="tab">Games</a></li>
                                 <li><a href="#profile" data-toggle="tab">Players</a></li>
                                 <li><a href="#messages" data-toggle="tab">Teams</a></li>
-                                
+
                             </ul>
                             <!-- End Nav Tabs -->
 
                             <!-- Content Tabs -->
                             <div class="tab-content">
                               <div class="tab-content">
-                                   
+
                                 <div id="home" class="tab-pane fade in active">
-                                    
+
                                 <br>
                                     <h4 style="color:white;">Most popular games</h4>
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                               <!-- Wrapper for slides -->
-                                    <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        
-                                        <div style="float:left;background-color:white;width:282px;margin-left:80px;"> <img src="/img/blog/pic03.jpg" alt="Chania">
-                                        <h4><a href="single-news.html">CTA Placement</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </div> 
+                                    <div class="carousel-inner" role="listbox" ng-controller="EventsCtrl">
+                                    <div class="item active" >
 
-                                        <div style="float:right;background-color:white;width:282px;margin-right:100px;"> <img src="/img/blog/pic01.jpg" alt="Chania">
+                                        <div style="float:left;background-color:white;width:282px;margin-left:80px;margin-bottom: 10px;"ng-repeat="event in events | limitTo : 4">
+                                            <img src="img/clubs-logos/1.png" alt="Chania">
                                         <h4><a href="single-news.html">CTA Placement</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>    
-                                        </div> 
-                                        
+                                        <p>{{event.description}}</p>
+                                        </div>
+
+                                        <!--<div style="float:right;background-color:white;width:282px;margin-right:100px;"> <img src="img/blog/pic01.jpg" alt="Chania">-->
+                                        <!--<h4><a href="single-news.html">CTA Placement</a></h4>-->
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                                        <!--</div>-->
+
                                     </div>
 
-                                    <div class="item">
-                                        <div style="float:left;background-color:white;width:282px;margin-left:80px;"> <img src="/img/blog/pic02.jpg" alt="Chania">
-                                        <h4><a href="single-news.html">CTA Placement</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </div> 
+                                    <!--<div class="item">-->
+                                        <!--<div style="float:left;background-color:white;width:282px;margin-left:80px;"> <img src="img/blog/pic02.jpg" alt="Chania">-->
+                                        <!--<h4><a href="single-news.html">CTA Placement</a></h4>-->
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                                        <!--</div>-->
 
-                                        <div style="float:right;background-color:white;width:282px;margin-right:100px;"> <img src="/img/blog/pic04.jpg" alt="Chania">
-                                        <h4><a href="single-news.html">CTA Placement</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>    
-                                        </div> 
-                                    </div>
+                                        <!--<div style="float:right;background-color:white;width:282px;margin-right:100px;"> <img src="img/blog/pic04.jpg" alt="Chania">-->
+                                        <!--<h4><a href="single-news.html">CTA Placement</a></h4>-->
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
 
-                                    <div class="item">
-                                        <div style="float:left;background-color:white;width:282px;margin-left:80px;">    <img src="/img/blog/pic04.jpg" alt="Chania">
-                                        <h4><a href="single-news.html">CTA Placement</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </div> 
+                                    <!--<div class="item">-->
+                                        <!--<div style="float:left;background-color:white;width:282px;margin-left:80px;">    <img src="img/blog/pic04.jpg" alt="Chania">-->
+                                        <!--<h4><a href="single-news.html">CTA Placement</a></h4>-->
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                                        <!--</div>-->
 
-                                        <div style="float:right;background-color:white;width:282px;margin-right:100px;"> <img src="/img/blog/pic01.jpg" alt="Chania">
-                                        <h4><a href="single-news.html">CTA Placement</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>    
-                                        </div> 
-                                    </div>
+                                        <!--<div style="float:right;background-color:white;width:282px;margin-right:100px;"> <img src="img/blog/pic01.jpg" alt="Chania">-->
+                                        <!--<h4><a href="single-news.html">CTA Placement</a></h4>-->
+                                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
                                     </div>
 
                                     <!-- ici -->
                                 </div>
                                 </div>
-                                  
-                                <div id="profile" class="tab-pane fade">                   
+
+                                <div id="profile" class="tab-pane fade">
                                 <br>
                                     <h4 style="color:white;">Most rated players</h4>
                                 <table>
@@ -177,10 +178,10 @@
                                 </tr>
                                 </table>
 
-                                  
-                                  
-                                  
-                                
+
+
+
+
                                   </div>
                                 <div id="messages" class="tab-pane fade">...</div>
                                 <div id="settings" class="tab-pane fade">...</div>
@@ -188,34 +189,62 @@
                                 <!-- Tab Theree - Club Teams -->
                             </div>
                             <!-- Content Tabs -->
-                        </div> 
+                        </div>
                         <!-- Left Content - Tabs and Carousel -->    
 
                         <!-- Right Content - Content Counter -->
-                        <div class="col-md-3">
+                        <!--<div class="col-md-3" ng-controller = "EventsCtrl">-->
+                            <!--<aside>-->
+                                <!--<div class="title-color text-center">-->
+                                    <!--<h4>Coming up next</h4>-->
+                                <!--</div>-->
+
+                                <!--<div class="content-counter content-counter-home" ng-repeat="event in events | limitTo : 1">-->
+                                    <!--<p class="text-center"> -->
+                                        <!--<i class="fa fa-clock-o"></i> -->
+                                        <!--Countdown Till Start-->
+                                    <!--</p>-->
+                                    <!--<div id="event-one" class="counter"></div>-->
+                                    <!--<ul class="post-options">-->
+                                        <!--<li><i class="fa fa-calendar"></i>{{event.start_date}}</li>-->
+                                        <!--<li><i class="fa fa-clock-o"></i>Kick-of, {{event.end_date}} PM</li>-->
+                                    <!--</ul>-->
+                                    <!--<p>{{event.description}}</p>-->
+                                    <!--<p>Stay tuned </p>-->
+                                    <!--<a class="btn btn-primary" href="">-->
+                                        <!--VIEW EVENT PAGE-->
+                                        <!--<i class="fa fa-trophy"></i>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</aside>            -->
+                            <!--&lt;!&ndash; Content Counter &ndash;&gt;-->
+                        <!--</div>-->
+                        <div class="col-md-3" ng-controller="EventsCtrl">
                             <aside>
                                 <div class="title-color text-center">
-                                    <h4>Coming up next</h4>
+                                    <h4>World Cup Championship</h4>
                                 </div>
 
-                                <div class="content-counter content-counter-home">
-                                    <p class="text-center"> 
-                                        <i class="fa fa-clock-o"></i> 
+                                <div class="content-counter content-counter-home" ng-repeat="event in events |limitTo : 1">
+                                    <p class="text-center">
+                                        <i class="fa fa-clock-o"></i>
                                         Countdown Till Start
                                     </p>
+                                    <div id="event-three" class="counter"><span>00 <br> <small>days</small></span>  <span>00 <br> <small>hr</small> </span>  <span>00 <br> <small>min</small> </span>  <span>00 <br> <small>sec</small></span> </div>
+
                                     <div id="event-one" class="counter"></div>
                                     <ul class="post-options">
-                                        <li><i class="fa fa-calendar"></i>June 12, 2014</li>
-                                        <li><i class="fa fa-clock-o"></i>Kick-of, 12:00 PM</li> 
+                                        <li><i class="fa fa-calendar"></i>{{event.start_date}} PM</li>
+
                                     </ul>
-                                    <p>Comming up next the team we mean will play in 2h against PI Mean stack in esprit ground</p>
-                                    <p>Stay turned </p>
-                                    <a class="btn btn-primary" href="#">
+                                    <p>{{event.description}}</p>
+                                    <p>STAY TUNED !</p>
+                                    <a class="btn btn-primary" href="">
                                         VIEW EVENT PAGE
                                         <i class="fa fa-trophy"></i>
                                     </a>
                                 </div>
-                            </aside>            
+                            </aside>
                             <!-- Content Counter -->
                         </div>
                         <!-- End Right Content - Content Counter -->
@@ -385,35 +414,26 @@
                         <!-- content Sidebar Center -->
                         <aside class="col-xs-6 col-sm-6 col-md-3 col-lg-3">                     
                             <!-- Locations -->
-                            <div class="panel-box">
+                            <div class="panel-box" ng-controller="GroundsCtrl">
                             
                                 <div class="titles">
                                     <h4>Available Sport Grounds</h4>
                                 </div>
                                 <!-- Locations Carousel --> 
-                                <ul class="single-carousel">    
+                                <ul class="single-carousel" ng-repeat="ground in grounds">    
                                     <li>
-                                        <img src="img/blog/1.jpg" alt="" class="img-responsive">
+                                        <a ng-if="ground.picture != '' " href="#">
+                                                <img src="http://localhost:3000/uploads/{{ground.picture}}" alt="" class="img-responsive">
+                                        </a>
+                                        <a ng-if="ground.picture == ''" href="single-news.html">
+                                                <img src="http://localhost:3000/uploads/no-img.png" alt="" class="img-responsive">
+                                            </a>
                                         <div class="info-single-carousel">
-                                            <h4>Mourouj 2</h4>
-                                            <p>Wana play football match ? a 100m² ground for football is available for more details 
-                                            contact the owner.</p>
+                                            <h4>{{ground.name}}</h4>
+                                            <p>{{ground.description}}</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <img src="img/blog/2.jpg" alt="" class="img-responsive">
-                                        <div class="info-single-carousel">
-                                            <h4>Brazilia</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cillum dolore eu fugiat nulla pariatur.</p>
-                                        </div>
-                                    </li> 
-                                    <li>
-                                        <img src="img/blog/3.jpg" alt="" class="img-responsive">
-                                        <div class="info-single-carousel">
-                                            <h4>Sao Paulo</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cillum dolore eu fugiat nulla pariatur.</p>
-                                        </div>
-                                    </li>                                    
+                                                                       
                                 </ul>
                                 <!-- Locations Carousel -->                                
                             </div>  
@@ -462,7 +482,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p>Esprit community is playing now with insat team.</p>
-                                        <ul class="list-diary">
+                                        <ul class="list-diary" ng-repeat="game in games">
                                             <!-- Item List Diary --> 
                                             <li>
                                                 <h5>Esprit-Insat<span>06-05-2014 - 11:00</span></h5>
@@ -477,39 +497,7 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <!-- End Item List Diary --> 
-
-                                            <!-- Item List Diary --> 
-                                            <li>
-                                                <h5>Sport club- legends <span>06-05-2014 - 11:00</span></h5>
-                                                <ul class="club-logo">
-                                                    <li>
-                                                        <img src="img/clubs-logos/3.png" alt="">
-                                                        <h6>Sport club</h6>
-                                                    </li>
-                                                    <li>
-                                                        <img src="img/clubs-logos/6.png" alt="">
-                                                        <h6>legends</h6>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <!-- End Item List Diary --> 
-
-                                            <!-- Item List Diary --> 
-                                            <li>
-                                                <h5>LIGA BBVA <span>06-05-2014 - 11:00</span></h5>
-                                                <ul class="club-logo">
-                                                    <li>
-                                                        <img src="img/clubs-logos/4.jpg" alt="">
-                                                        <h6>Esprit Sport</h6>
-                                                    </li>
-                                                    <li>
-                                                        <img src="img/clubs-logos/5.jpeg" alt="">
-                                                        <h6>Insat</h6>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <!-- End Item List Diary --> 
+                                            <!-- End Item List Diary -->
                                         </ul>
                                     </div>
                                 </div>

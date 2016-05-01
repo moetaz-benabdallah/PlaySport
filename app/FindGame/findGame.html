@@ -37,17 +37,19 @@
                 <section class="container">
                     <div class="row padding-top"> 
                         <!-- Left Content -->
-                        <div class="col-md-4">
+                        <div class="col-md-4" >
                             <aside class="panel-box">
                                 <div class="titles">
                                     <h4>Nearest games</h4>
                                 </div>
+
                                 <address>
                                   <strong>Sports Cup, Inc.</strong><br>
-                                  <i class="fa fa-map-marker"></i><strong>Football Game </strong> Tunis, Rades<br>
-                                  <i class="fa fa-plane"></i><strong>Volleyball Game </strong>Tunis, Bardo<br>
-                                  <i class="fa fa-phone"></i><strong>Basketball Game </strong>Tunis, Nabeul
+                                    <div ng-repeat="event in events">
+                                  <a href="#/events/{{event._id}}"><i class="fa fa-map-marker" ></i><strong ng-href="">{{event.name}} | </strong>{{event.groundName}}</a>
+                                    </div>
                                 </address>
+
                             </aside>
 
                             <aside class="panel-box">
@@ -62,48 +64,71 @@
                         </div>
                         <!-- End Left Content -->
 
-                        <!-- Right Content -->
-                        <div class="col-md-8">
-                            <div class="panel-box">
-                                <div class="titles">
-                                    <h4>Contact Form</h4>
-                                </div>
-                                <!-- Form Contact -->
-                                <form class="form-theme" action="php/send-mail.php">
+                        <!--Right Content -->
+                       <div class="col-md-8">
+                           <div class="panel-box">
+                               <div class="titles">
+                                   <h4>Organize Game Form</h4>
+                               </div>
+                               <!-- Form Contact -->
+                                <form class="form-theme" action="">
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-6">
-                                                <label>Your name *</label>
-                                                <input type="text"  required="required" value="" maxlength="100" class="form-control" name="Name" id="name">
+                                                <label>Enter game name here *</label>
+                                                <input type="text"  required="required" value="" maxlength="100" class="form-control" name="Name" id="name" ng-model="game.name">
                                             </div>
                                             <div class="col-md-6">
-                                                <label>Your email address *</label>
-                                                <input type="email"  required="required" value="" maxlength="100" class="form-control" name="Email" id="email">
+                                                <label>Select a Date *</label>
+                                                <input type='text' id='datepicker' name="start_date" placeholder='Select date'ng-model="game.start_date" />
+                                                <script>
+                                                    $('#datepicker').datepicker({ minDate: 0 });
+
+                                                </script>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
                                         <div class="form-group">
-                                            <div class="col-md-12">
-                                                <label>Comment *</label>
-                                                <textarea maxlength="5000" rows="10" class="form-control" name="message"  style="height: 138px;" required="required" ></textarea>
+                                            <div class="col-md-6">
+                                                <label>Select a Ground *</label>
+                                                <select ng-model="game.location" class="form-control">
+                                                    <option ng-repeat="ground in grounds"
+                                                            value="{{ground._id}}">
+                                                        {{ground.name}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Select a Sport *</label>
+                                                <select ng-model="game.sport" class="form-control">
+
+                                                    <option value="FootBall">
+                                                        Football
+                                                    </option>
+                                                    <option  value="VolleyBall">
+                                                        VolleyBall
+                                                    </option>
+                                                    <option  value="BasketBall">
+                                                        BasketBall
+                                                    </option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
-<!--
-                                            <input type="submit" value="Join the game" class="btn btn-lg btn-primary">
--->
-                                            <a class="btn btn-lg btn-primary" href="#/waiting">Join the game</a>
+                                            <input type="submit" value="Organize a game" class="btn btn-lg btn-primary" ng-click="organizeGame()">
+                <!--<button type="submit" ng-click="organizeGame()" class="btn btn-primary">Organize a game</button>-->
+                                           
+                                            <!--<a class="btn btn-lg btn-primary" href="#/waiting">Organize a game</a>-->
                                         </div>
                                     </div>
                                 </form>
-                                <!-- End Form Contact --> 
+                                <!-- End Form Contact -->
                                 <div class="result"></div>
                             </div>
-                        </div> 
-                        <!-- End Right Content -->         
+                        </div>
+                        <!-- End Right Content -->
                     </div>    
                 </section>
                 <!-- End Content Central -->
@@ -144,7 +169,11 @@
                             </div>
                         </div>
                     </div>
-                </div>  
+
+                </div>
+
                 <!-- End Newsletter -->  
             </section>
             <!-- End Section Area - Content Central -->
+
+

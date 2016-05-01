@@ -1,6 +1,7 @@
 {
     "jscodehints.detectedExclusions": [
         "C:/Users/Donia/git/PlaySport/app/User/signup.js",
-        "C:/Users/Donia/git/PlaySport/app/User/login.js"
+        "C:/Users/Donia/git/PlaySport/app/User/login.js",
+        "C:/Users/Donia/Desktop/PlaySportNow_Clean/app/app.js"
     ]
 }

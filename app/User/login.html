@@ -23,8 +23,16 @@
 <!--
                                             <input type="submit" value="Login" class="btn btn-lg btn-primary" ng-click="#/teamProfile">
 -->
-                                            <a value="Login" class="btn btn-lg btn-primary" href="#/teamProfile">Login</a>   
-                                            You don't have an account ? <a href="#/signup">Sign Up Now..</a>
+                                            <a value="Login" class="btn btn-lg btn-primary" ng-click="localLogin(login,pwd)">Login</a>
+                                            You don't have an account ? <a href="#/signup">Sign Up Now..</a></br>
+                                            or <a href="" class="btn btn-primary" ng-click="loginFacebook()">Login with facebook</a>
+
+                                            <a href="" class="btn btn-primary" ng-click="FacebookFriends();">Bring Your Friends from facebook</a>
+                                <div id="friends-list-container"></div>
+
+                                            <a class="btn btn-primary" ng-click="myFacebookLogin()">Loginnnnnn</a>
+                                            <div id="status">
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
@@ -32,4 +40,4 @@
                                 
                             </div>
                         
-                        <!-- End Right Content --> 
+                        <!-- End Right Content -->

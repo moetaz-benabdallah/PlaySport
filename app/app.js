@@ -11,7 +11,9 @@ angular.module('myApp', [
     'myApp.news',
     'myApp.eventsServices',
     'myApp.groundsServices',
-    'myApp.FindGame'
+    'myApp.FindGame',
+    'myApp.FacebookProfile',
+    'myApp.Login'
 
 ]).
 config(['$routeProvider', function($routeProvider) {
@@ -95,6 +97,10 @@ config(['$routeProvider', function($routeProvider) {
                 templateUrl:'Events/waiting.html',
                 controller: ''
             })
+            .when('/wait',{
+             templateUrl:'Events/waiting_join.html',
+             controller: ''
+            })
 
             //espace arbitre
             .when('/referee',{
@@ -134,7 +140,13 @@ config(['$routeProvider', function($routeProvider) {
             })
 
             .when('/login',{
-                templateUrl:'User/login.html'
+                templateUrl:'User/login.html',
+                controller: 'LoginCtrl'
+            })
+
+            .when('/profile',{
+                templateUrl:'User/facebook-profile.html',
+                controller : 'FacebookProfileCtrl'
             })
 
             .when('/signup',{

@@ -13,22 +13,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
-      <link rel="stylesheet" href="/app.css">
+      <link rel="stylesheet" href="app.css">
 
     <!-- Theme CSS -->
-  <link href="/Calandar/calandar.css" rel="stylesheet" media="screen">
-    <link href="/Stats/stats.css" rel="stylesheet" media="screen">
+
   <link href="css/style.css" rel="stylesheet" media="screen">
+  <link href="css/animations/animate.css" rel="stylesheet" media="screen">
   <!-- Responsive CSS -->
   <link href="css/theme-responsive.css" rel="stylesheet" media="screen">
   <!-- Skins Theme -->
-  <link href="#" rel="stylesheet" media="screen" class="skin">
+  <link rel="stylesheet" media="screen" class="skin">
+
+    <!-- Custom Styles -->
+    <link href="Calandar/calandar.css" rel="stylesheet" media="screen">
+    <link href="Stats/stats.css" rel="stylesheet" media="screen">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="/img/icons/favicon.ico">
-  <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="img/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
+
 
   <!-- Head Libs -->
   <script src="js/modernizr.js"></script>
@@ -36,7 +41,7 @@
   <!-- Skins Changer-->
      <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 
-    <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
  <!-- Header-->
@@ -55,13 +60,13 @@
                             <!-- End Logo-->
 
                             <!-- Adds Header-->
-                            <div class="col-md-3 adds">
+                            <div class="col-md-3 adds" ng-controller="FacebookProfileCtrl" >
 
                                 <ul class="testimonials">
                                     <li>
                                         <blockquote>
-                                        <img src="img/players/2.jpg" alt="">
-                                        <strong>Donia Mekni</strong><a href="#">Logout</a></blockquote>
+                                        <img src="{{profile.picture}}" alt="">
+                                        <strong>{{profile.name}}</strong><a href="#">Logout</a></blockquote>
                                     </li>
 
                                 </ul>
@@ -255,9 +260,6 @@
             </header>
             <!-- End Header-->
 
-
-
-
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -403,9 +405,15 @@
      socket.on('notificationEvent', function (data) {
          alert('Event '+data.name+' added');
          console.log(data);
-     })
+     });
+     socket.on('A_new_game_added', function (data) {
+         alert('Game '+data.name+' added');
+         console.log(data);
+     });
 
  </script>
+
+
 
 
 
@@ -414,15 +422,19 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
   <script src="app.js"></script>
 
   <script src="Home/home.js"></script>
   <script src="Events/events.js"></script>
   <script src="Events/eventsServices.js"></script>
   <script src="TeamProfile/teamProfile.js"></script>
+  <script src="User/facebook-profile.js"></script>
   <script src="TeamProfile/news.js"></script>
   <script src="Grounds/grounds.js"></script>
   <script src="Grounds/groundsServices.js"></script>
+  <script src="User/login.js"></script>
 
   <script src="Calandar/calandar.js"></script>
   <script src="Stats/stats.js"></script>
@@ -437,7 +449,7 @@
      <!-- ======================= JQuery libs =========================== -->
 
         <!-- jQuery local-->
-        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
         <!--Nav-->
         <script type="text/javascript" src="js/nav/tinynav.js"></script>
         <script type="text/javascript" src="js/nav/hoverIntent.js"></script>
@@ -448,8 +460,8 @@
          <!--Accorodion-->
         <script type="text/javascript" src="js/accordion/accordion.js" ></script>
         <!--Slide-->
-        <script type="text/javascript" src="js/slide/camera.js" ></script>
-        <script type='text/javascript' src="js/slide/jquery.easing.1.3.min.js"></script>
+        <script type='text/javascript' src="js/slide/camera.js" ></script>
+        <script type="text/javascript" src="js/slide/jquery.easing.1.3.min.js"></script>
         <!-- Maps -->
         <script src="js/maps/gmap3.js"></script>
         <script src='http://maps.google.com/maps/api/js'></script>
@@ -457,6 +469,10 @@
         <script src="js/ngCordova/dist/ng-cordova.js"></script>
 
         <script src="js/cordova.js"></script>
+
+         <!-- FB Send -->
+         <script src="http://connect.facebook.net/en_US/all.js"></script>
+         <!--  -->
         <!--Ligbox-->
         <script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script>
         <!-- carousel.js-->

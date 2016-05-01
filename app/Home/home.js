@@ -7,8 +7,9 @@ angular.module('myApp.Home', ['ngRoute','ngResource'])
                  
 })
 
-.controller('HomeCtrl', function($scope, Community,$http) {
-   var test = [];
+.controller('HomeCtrl', function($scope, Community, $http) {
+   
+    var test = [];
         
    test = Community.query();
    $scope.history = test;
@@ -17,4 +18,6 @@ angular.module('myApp.Home', ['ngRoute','ngResource'])
    .then(function(response) {
         $scope.news = response.data;
     });
+    
+   
 });
