@@ -48,6 +48,9 @@
                                     <div ng-repeat="event in events">
                                   <a href="#/events/{{event._id}}"><i class="fa fa-map-marker" ></i><strong ng-href="">{{event.name}} | </strong>{{event.groundName}}</a>
                                     </div>
+                                    <div ng-repeat="game in games">
+                                  <i class="fa fa-map-marker" ></i><strong ng-href="">{{game.name}} | </strong>{{game.groundName}}
+                                    </div>
                                 </address>
 
                             </aside>
@@ -119,7 +122,7 @@
                                         <div class="col-md-12">
                                             <input type="submit" value="Organize a game" class="btn btn-lg btn-primary" ng-click="organizeGame()">
                 <!--<button type="submit" ng-click="organizeGame()" class="btn btn-primary">Organize a game</button>-->
-                                           
+
                                             <!--<a class="btn btn-lg btn-primary" href="#/waiting">Organize a game</a>-->
                                         </div>
                                     </div>
@@ -129,7 +132,49 @@
                             </div>
                         </div>
                         <!-- End Right Content -->
-                    </div>    
+                        <!-- Right Content -->
+                        <!--<div class="col-md-8">-->
+                            <!--<div class="panel-box">-->
+                                <!--<div class="titles">-->
+                                    <!--<h4>Contact Form</h4>-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; Form Contact &ndash;&gt;-->
+                                <!--<form class="form-theme" action="php/send-mail.php">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<div class="col-md-6">-->
+                                                <!--<label>Your name *</label>-->
+                                                <!--<input type="text"  required="required" value="" maxlength="100" class="form-control" name="Name" id="name">-->
+                                            <!--</div>-->
+                                            <!--<div class="col-md-6">-->
+                                                <!--<label>Your email address *</label>-->
+                                                <!--<input type="email"  required="required" value="" maxlength="100" class="form-control" name="Email" id="email">-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<div class="col-md-12">-->
+                                                <!--<label>Comment *</label>-->
+                                                <!--<textarea maxlength="5000" rows="10" class="form-control" name="message"  style="height: 138px;" required="required" ></textarea>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-md-12">-->
+<!--&lt;!&ndash;-->
+                                            <!--<input type="submit" value="Join the game" class="btn btn-lg btn-primary">-->
+<!--&ndash;&gt;-->
+                                            <!--<a class="btn btn-lg btn-primary" href="#/waiting">Join the game</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</form>-->
+                                <!--&lt;!&ndash; End Form Contact &ndash;&gt; -->
+                                <!--<div class="result"></div>-->
+                            <!--</div>-->
+                        <!--</div> -->
+                        <!-- End Right Content -->
+                    </div>
                 </section>
                 <!-- End Content Central -->
 

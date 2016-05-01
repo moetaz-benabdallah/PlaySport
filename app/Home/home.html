@@ -503,7 +503,44 @@
                                 </div>
                                                                
                             </div>  
-                           
+<!--                           Weath-->
+<div class="panel-box"  ng-repeat="w in wea">
+                                <div class="titles">
+                                    <h4><img src="{{w.current.imageUrl}}"/>Weather</h4>
+                                </div>
+                                <!-- List Diary -->
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <ul class="list-diary">
+                                            <li>
+                                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                              <div class="carousel-inner" role="listbox">
+
+                                                <div class="item active" style="font-family:'AgencyFB'; font-size:16px;">
+
+                                                    Weather<br>
+
+                                                </div>
+                                                <div class="item">
+                                                    <h5>{{w.location.name}}</h5><br>
+                                                    <h6>{{w.current}}</h6>
+                                                    <h6 style="color:#3399ff">Tmp:{{w.location.degreetype}}</h6>
+                                                </div>
+
+
+                                            </div>
+                                            </div>
+
+
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+<!--                    end       Weath-->
                             <div class="panel-box">
                                 <div class="titles">
                                     <h4><img src="img/icons/twitter.png"/>Latest Tweets</h4>
@@ -606,5 +643,4 @@
         <!-- End layout-->
 
        
- 
  

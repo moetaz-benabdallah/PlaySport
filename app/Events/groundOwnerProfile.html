@@ -193,6 +193,10 @@
 
 
                                     <form class="form-theme">
+
+                                        <input type="text" id="lat" hidden>
+                                        <input type="text" id="lng" hidden>
+
                                         <div class="row">
                                             <div class="form-group">
                                                 <div class="col-md-6">
@@ -201,7 +205,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>Location *</label>
-                                                    <input type="text"  required="required" value="" ng-model="groundNew.location" maxlength="100" class="form-control">
+                                                    <input type="text" gm-places-autocomplete id="autocomplete" ng-model="autocomplete" maxlength="100" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -252,7 +256,7 @@
                                             <div class="form-group">
                                                 <div class="col-md-12">
                                                     <label>Description *</label>
-                                                    <textarea maxlength="5000" rows="10" class="form-control" ng-model="eventNew.description" name="description" style="height: 138px;" required="required" ></textarea>
+                                                    <textarea maxlength="5000" rows="10" class="form-control" ng-model="groundNew.description" name="description" style="height: 138px;" required="required" ></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -302,7 +306,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <label>Date *</label>
-                                                <input type="datetime-local" required="required" value="" ng-model="eventNew.date" maxlength="100" class="form-control" name="date" id="date">
+                                                <input type="datetime-local" required="required" value="" ng-model="eventNew.start_date" maxlength="100" class="form-control" name="date" id="date">
                                             </div>
                                         </div>
 
@@ -345,6 +349,18 @@
                             </div>
                             <!-- End Info-->
 
+
+
+
+                            <div ng-controller="GroundsCtrl">
+                                <div ng-init="initializeClickMap()">
+                                    <div id="map_canvas" data-tap-disabled="false" style="width: 360px; height: 300px"></div>
+                                </div>
+                            </div>
+
+
+<br>
+
                             <!-- Locations -->
                             <div class="panel-box" ng-controller="GroundsCtrl">
 
@@ -357,7 +373,8 @@
                                 <ul class="single-carousel">
 
                                     <li ng-repeat="ground in grounds">
-                                        <img src="http://localhost:3000/uploads/{{ground.picture}}" alt="" class="img-responsive">
+                                        <img ng-if="ground.picture != ''" src="http://localhost:3000/uploads/{{ground.picture}}" alt="" class="img-responsive">
+                                        <img ng-if="ground.picture == ''" src="http://localhost:3000/uploads/no-img.png" alt="" class="img-responsive">
                                         <div class="info-single-carousel">
                                             <h4>{{ground.name}}</h4>
                                             <p>{{ground.description}}</p>
@@ -553,6 +570,10 @@
 
         <!-- ======================= JQuery libs =========================== -->
         <!-- jQuery local-->
+
+
+
+
         <script src="js/jquery.js"></script>
         <!--Nav-->
         <script type="text/javascript" src="js/nav/tinynav.js"></script>
