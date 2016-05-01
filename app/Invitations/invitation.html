@@ -1,0 +1,101 @@
+            <!-- Section Title -->           
+            <section class="section-title img-communityprofile">
+                <div class="overlay-bg"></div>
+                <div class="container">
+                    <h1>Invitation</h1>
+                </div>
+            </section>
+            <!-- End Section Title -->
+
+
+            <!-- Section Area - Content Central -->
+            <section class="content-info">
+                
+                <!-- Menu-->
+          
+                 <!-- End Menu-->
+                
+                
+                <div class="semiboxshadow text-center">
+                    <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+                </div>
+
+                <!-- Content Central -->
+                <div class="container padding-top">
+                    <div class="row">
+                        
+                        <!-- content Players --> 
+                        <div class="col-md-12">                     
+                            <!-- Panel Box -->
+                            <div class="panel-box">
+                                <div class="titles">
+                                    <h4><i class="fa fa-envelope"></i>Invitation details</h4>
+                                </div>
+                                <!-- Players --> 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <!-- Item Players--> 
+                                    <div class="widget-container">
+                                      
+                            <div >
+                                 <table id="comunityprofilecontent">
+                                     <tr>
+                                        <td  class="lbl">Objet:</td>
+                                        <td class="lblcontent">{{invitation.objet}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">From:</td>
+                                        <td class="lblcontent">{{invitation._from}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">Content:</td>
+                                        <td class="lblcontent">{{invitation.content}}</td>
+                                     </tr>
+                                     <tr>
+                                        <td class="lbl">Date:</td>
+                                        <td class="lblcontent">{{invitation.date | date:'MM/dd/yyyy' }}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">Status:</td>
+                                        <td class="lblcontent">{{invitation.status}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td><button ng-click="accept()" class="btn btn-success">Accept</button></td>
+                                        <td><button ng-click="decline()" class="btn btn-danger">Decline</button></td>
+                                     </tr>
+                                     
+                                </table>
+                                    </div>
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                        <!-- End Item Players-->  
+                                    </div>
+                                </div>
+                                <!-- End Players -->                                
+                            </div>  
+                            <!-- End Panel Box --> 
+
+
+
+            </div>
+                        </div>
+                        <!-- End Players -->
+
+
+                     
+                    </div>    
+                
+                <!--list news--> 
+                 
+               <!-- end list news-->
+           
+<!--<div ng-repeat="h in history">
+{{h.text}}
+</div>-->
+<!-- End Content Central -->
+
+            </section>
+
