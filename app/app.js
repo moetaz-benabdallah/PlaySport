@@ -8,8 +8,6 @@ angular.module('myApp', [
     'myApp.Events',
     'myApp.Grounds',
     'myApp.version',
-    'myApp.teamProfile',
-    'myApp.news',
     'myApp.eventsServices',
     'myApp.groundsServices',
     'myApp.FindGame',
@@ -20,7 +18,19 @@ angular.module('myApp', [
     'ngCookies',
     'myApp.referee',
     'myApp.refereeSuggServices',
-    'myApp.FindGame'
+    'myApp.FindGame',
+    'myApp.invitations',   
+    'myApp.community',
+    'myApp.news',
+    'myApp.tweetinvite',
+    'myApp.communities',
+    'myApp.invite',
+    'myApp.communityProfile',
+    'myApp.invitation',
+    'myApp.calandar',
+    'myApp.communitiesList',
+    'myApp.inviteCT',
+    'myApp.singleNews'
 
 ]).
 config(['$routeProvider', function($routeProvider) {
@@ -149,24 +159,74 @@ config(['$routeProvider', function($routeProvider) {
                 controller:'SuggRCtrl'
             })
 
+           .when('/community/:param',{
+                templateUrl:'CommunityProfile/community.html',
+                controller: 'communityCtrl'
+            })
+            
+            .when('/communityProfile/:param',{
+                templateUrl:'CommunityProfile/communityProfile.html',
+                controller: 'communityProfileCtrl'
+            })
+            
+            .when('/invite/:param1/:param2',{
+                templateUrl:'CommunityProfile/invite.html',
+                controller: 'inviteCtrl'
+            })
+     
+            .when('/inviteCT/:param1/:param2',{
+                templateUrl:'CommunitiesList/invite.html',
+                controller: 'inviteCTCtrl'
+            })
+            
+            .when('/calandar/:param',{
+                templateUrl:'Calandar/calandar.html',
+                controller: 'calandarCtrl'
+            })
+     
             .when('/stats',{
                 templateUrl:'Stats/stats.html',
                 controller: 'statsCtrl'
             })
-
-             .when('/communities',{
+     
+            /* .when('/communities',{
                 templateUrl:'CommunitiesList/communitiesList.html',
                 controller: 'communitiesListCtrl'
-            })
-
-             .when('/invitations',{
+            })*/
+     
+             .when('/invitations/:param',{
                 templateUrl:'Invitations/invitations.html',
-                controller: ''
+                controller: 'invitationsCtrl'
             })
-
-            .when('/teamProfile/news',{
-                templateUrl:'TeamProfile/news.html',
+     
+             .when('/invitation/:param',{
+                templateUrl:'Invitations/invitation.html',
+                controller: 'invitationCtrl'
+            })
+     
+             .when('/communityProfile/:param/news',{
+                templateUrl:'CommunityProfile/news.html',
                 controller: 'newsCtrl'
+            })
+     
+             .when('/tweetinvite',{
+                templateUrl:'TweetAout/tweet.html',
+                controller: 'tweetCtrl'
+            })
+     
+            .when('/communities',{
+                templateUrl:'CommunityProfile/communities.html',
+                controller: 'communitiesCtrl'
+            })
+     
+            .when('/singleNews/:param',{
+                templateUrl:'News/singleNews.html',
+                controller: 'singleNewsCtrl'
+            })
+            
+            .when('/teams&communities/:param',{
+                templateUrl:'CommunitiesList/communitiesList.html',
+                controller: 'communitiesListCtrl'
             })
 
             .when('/login',{
