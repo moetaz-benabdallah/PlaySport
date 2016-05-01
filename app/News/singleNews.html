@@ -1,0 +1,181 @@
+<!-- Section Title -->           
+            <section class="section-title img-news">
+                <div class="overlay-bg"></div>
+                <div class="container">
+                    <h1>Latest News</h1>
+                </div>
+            </section>
+            <!-- End Section Title --> 
+
+            <!-- Section Area - Content Central -->
+            <section class="content-info">
+
+                <div class="crumbs">
+                    <div class="container">
+                       <a href="#/home"> <img src="img/icons/Return.png">go back</a>
+                    </div>        
+                </div>
+
+                <div class="semiboxshadow text-center">
+                    <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+                </div>
+
+                <!-- Content Central -->
+                <div class="container padding-top">
+                    <div class="row">
+                        
+                        <!-- content Column Left -->
+                        <div class="col-md-8">                     
+                            <!-- Recent Post -->
+                            <div class="panel-box">
+                            
+                                <div class="post-item">
+                                    <div class="row">
+                                       
+                                        <div class="col-md-8">
+                                           <center> <h2>{{singlenews.title}}</h2>
+                                            <p>{{singlenews.description}}</p></center> 
+                                         <h4 style="text-align: right">{{singlenews.date | date:'MM/dd/yyyy' }}</h4>
+                                        </div>
+                                   </div>
+                                </div>
+                                 <!-- End Post Item -->
+
+                            </div>  
+                            <!-- End Recent Post --> 
+                            
+                           <form ng-submit="newComment()" class="form-horizontal" role="form">
+                              <div class="form-group">
+                                <p class="control-label col-sm-2" for="comment">Comment:</p>
+                                <div class="col-lg-10">
+                                  <input ng-model="commentData.content" type="text" class="form-control" id="comment" placeholder="say something">
+                                </div>
+                              </div>
+                                <div class="form-group"> 
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                      <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            
+                            <ul ng-repeat=" c in comments " class="list-group">
+                              <li class="list-group-item">{{c.content}}
+                                
+                                <p style="text-align: right">{{singlenews.date | date:'MM/dd/yyyy' }}</p>
+                            </li>
+                                
+                            </ul>
+
+                        </div>
+                         <!-- End content Left -->
+
+                        <!-- content Sidebar Center -->
+                        <aside class="col-md-4">                     
+                            
+                            <div>
+                                <h4>Searh Sidebar</h4>
+                                <form class="search" action="#" method="Post">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="Search..." name="email"  type="email" required="required">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary" type="submit" name="subscribe" >Go!</button>
+                                        </span>
+                                    </div>
+                                </form>   
+                            </div>
+
+                            <!-- Video presentation -->
+                            <div class="panel-box">
+                                <div class="titles">
+                                    <h4>Presentation</h4>
+                                </div>
+                                <!-- Locations Video --> 
+                                <div class="row">
+                                    <iframe src="//www.youtube.com/embed/l12OhR6nxiM" class="video"></iframe>
+                                    <div class="col-md-12">
+                                        <h4>Rio de Janeiro</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris.</p>
+                                    </div>
+                                </div>
+                                <!-- End Locations Video --> 
+                            </div>  
+                            <!-- End Video presentation-->
+
+                            <!-- Widget Categories-->
+                            <div class="panel-box">
+                                <div class="titles">
+                                    <h4>Categories</h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul class="list">
+                                            <li><i class="fa fa-check"></i><a href="#">Design</a></li>
+                                            <li><i class="fa fa-check"></i><a href="#">Photos</a></li>
+                                            <li><i class="fa fa-check"></i><a href="#">Videos</a></li>
+                                            <li><i class="fa fa-check"></i><a href="#">Lifestyle</a></li>
+                                            <li><i class="fa fa-check"></i><a href="#">Technology</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>  
+                            <!-- End Widget Categories-->  
+
+                            <!-- Widget Text-->
+                            <div class="panel-box">
+                                <div class="titles">
+                                    <h4>Widget Text</h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore.</p>
+                                    </div>
+                                </div>
+                            </div>  
+                            <!-- End Widget Text-->
+                        </aside>
+                        <!-- End content Sidebar Center -->
+                    </div>                     
+                </div>  
+                <!-- End Content Central -->
+
+                <!-- Newsletter -->
+                <div class="section-wide">
+                    <div class="container">
+                        <div class="row newsletter">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <h2>Enter your e-mail and <span class="text-resalt">subscribe</span> to our newsletter.</h2>
+                                    <p>Duis non lorem porta,  eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat.</p>
+                                </div>
+                                <form id="newsletterForm" action="php/mailchip/newsletter-subscribe.php">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                                <input class="form-control" placeholder="Your Name" name="name"  type="text" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                                <input class="form-control" placeholder="Your  Email" name="email"  type="email" required="required">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-primary" type="submit" name="subscribe" >SIGN UP</button>
+                                                 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>   
+                                <div id="result-newsletter"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <!-- End Newsletter -->  
+            </section>
+            <!-- End Section Area -  Content Central -->
