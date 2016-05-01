@@ -17,4 +17,9 @@ angular.module('myApp.Home', ['ngRoute','ngResource'])
    .then(function(response) {
         $scope.news = response.data;
     });
+
+    $http.get("http://localhost:3000/weather")
+   .then(function(response) {
+        $scope.wea = response.data;
+    });s
 });

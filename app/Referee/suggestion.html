@@ -14,6 +14,8 @@
         <link href="css/style.css" rel="stylesheet" media="screen">
         <!-- Responsive CSS -->
         <link href="css/theme-responsive.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap/bootstrap-theme.css" rel="stylesheet" media="screen">
         <!-- Skins Theme -->
         <link href="#" rel="stylesheet" media="screen" class="skin">
         <!-- Timeline CSS -->
@@ -58,7 +60,7 @@
                         <ul>
                             <li><a href="index.html">Referee Space</a></li>
                                                              <li>/</li>
-                                                              <li><a href="#/timeline">Timeline</a></li>
+                                                              <li><a href="#/sugg">All suggestions</a></li>
 
                         </ul>
                     </div>
@@ -70,77 +72,48 @@
 
                 <!-- Content Central -->
                 <div class="container">
-
 <div class="row">
-<div class="col-xs-4">
+ <div class="col-xs-12">
+     <h1>All suggestions </h1>
 
-<!-- The Timeline -->
-<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-print"></span>Add a new task in your timeline</button>
-<div id="demo" class="collapse">
-   <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Title</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Title">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Description</label>
-    <textarea class="form-control" rows="3"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">Date</label>
-    <input type="date" class="form-control">
+      <div class="table-responsive">
+        <table class="table" >
 
-  </div>
+          <thead>
+            <tr>
+              <th>Object</th>
+              <th>Description</th>
+              <th>Statuts</th>
 
-  <button type="submit" class="btn btn-danger">Ok</button>
-</form>
-  </div>
+            </tr>
+          </thead>
+         <tbody  ng-repeat="s in sugg">
+            <tr>
 
+              <td>{{s.object}}</td>
+              <td>{{s.description}}</td>
+              <td>{{s.status}}</td>
+            </tr>
+      </tbody>
+
+          <tfoot>
+            <tr>
+
+            </tr>
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
 </div>
 
-<ul class="timeline">
-
-	<!-- Item 1 -->
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">Match Mourouj Team</span>
-				<span class="time-wrapper"><span class="time">12-02-2016 </span></span>
-			</div>
-			<div class="desc">My current employment. Way better than the position before!</div>
-		</div>
-	</li>
-
-	<!-- Item 2 -->
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">Match esprit Team</span>
-				<span class="time-wrapper"><span class="time">18-02-2016</span></span>
-			</div>
-			<div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
-		</div>
-	</li>
-
-	<!-- Item 3 -->
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">Harvard University</span>
-				<span class="time-wrapper"><span class="time">2008 - 2011</span></span>
-			</div>
-			<div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
-		</div>
-	</li>
-
-</ul>
-
-
-                </div>
-                <!-- End Content Central -->
-
-
-            </section>
+<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">Add a suggestion</button>
+<div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+    </section>
 
 
 
