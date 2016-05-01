@@ -16,6 +16,14 @@ services.factory('GroundsFactory', ['$http', function ($http){
         return $http.post('http://localhost:3000/grounds/newground', ground );
     };
 
+    dataFactory.geocode = function (location) {
+        return $http.get('https://maps.googleapis.com/maps/api/geocode/json?&address='+location);
+    };
+
+    dataFactory.uploadPicture = function (idGround) {
+        return $http.post('http://localhost:3000/grounds/show/'+idGround, null);
+    };
+
     return dataFactory;
 
 }]);

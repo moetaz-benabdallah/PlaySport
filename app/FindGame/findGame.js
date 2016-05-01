@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('myApp.FindGame', ['ngCordova','ngResource'])
- 
-.controller('FindGameCtrl', function($scope, $cordovaGeolocation, GamesFactory, GroundsFactory) {
+
+.controller('FindGameCtrl', function($scope, $cordovaGeolocation, GamesFactory, GroundsFactoryy) {
     var
-    listGrounds = GroundsFactory.query();
+    listGrounds = GroundsFactoryy.query();
 console.log(listGrounds);
         var
     listGames = GamesFactory.query();
@@ -54,7 +54,7 @@ console.log(listGrounds);
 
     })
 
-    .factory('GroundsFactory', function($resource){
+    .factory('GroundsFactoryy', function($resource){
         //Resource
         return $resource('http://localhost:3000/grounds/grounds');
 

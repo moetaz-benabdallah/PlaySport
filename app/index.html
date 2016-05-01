@@ -410,10 +410,10 @@
 
 
 
-
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+ <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
   <script src="app.js"></script>
 
   <script src="Home/home.js"></script>
@@ -423,6 +423,7 @@
   <script src="TeamProfile/news.js"></script>
   <script src="Grounds/grounds.js"></script>
   <script src="Grounds/groundsServices.js"></script>
+  <script src="Google/google.js"></script>
 
   <script src="Calandar/calandar.js"></script>
   <script src="Stats/stats.js"></script>
@@ -432,6 +433,9 @@
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+
+
+
 
 
      <!-- ======================= JQuery libs =========================== -->
@@ -452,9 +456,13 @@
         <script type='text/javascript' src="js/slide/jquery.easing.1.3.min.js"></script>
         <!-- Maps -->
         <script src="js/maps/gmap3.js"></script>
-        <script src='http://maps.google.com/maps/api/js'></script>
+ <!--<script src='http://maps.google.com/maps/api/js'></script>-->
 
-        <script src="js/ngCordova/dist/ng-cordova.js"></script>
+ <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+ <script src="http://jvandemo.github.io/angularjs-google-maps/dist/angularjs-google-maps.js"></script>
+
+
+ <script src="js/ngCordova/dist/ng-cordova.js"></script>
 
         <script src="js/cordova.js"></script>
         <!--Ligbox-->

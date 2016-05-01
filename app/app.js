@@ -2,6 +2,7 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
+    'gm',
     'ngRoute',
     'myApp.Home',
     'myApp.Events',
@@ -11,7 +12,9 @@ angular.module('myApp', [
     'myApp.news',
     'myApp.eventsServices',
     'myApp.groundsServices',
-    'myApp.FindGame'
+    'myApp.FindGame',
+    'myApp.Google',
+    'ngCookies'
 
 ]).
 config(['$routeProvider', function($routeProvider) {
