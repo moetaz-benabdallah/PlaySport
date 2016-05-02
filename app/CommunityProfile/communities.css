@@ -1,0 +1,47 @@
+#listcommunities{
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+#BTNbuildcommunity{
+   /*margin-left: 600px;*/
+    float: right;
+    margin-right: 16px;
+    margin-bottom: 20px;
+}
+
+#Formbuildcommunity{
+    width: 300px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    
+}
+
+#actions{
+    margin-bottom: 20px;
+}
+
+#comunityprofilecontent{
+ margin-left: 50px;   
+}
+
+.lbl{
+    font-family: Arial;
+    font-size: 14px;
+    color: deepskyblue; 
+}
+
+.lblcontent{
+    font-family: Arial;
+    font-size: 14px;
+    color: black; 
+}
+
+#freinds{
+    width: 300px;
+    
+}
