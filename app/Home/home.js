@@ -9,11 +9,12 @@ angular.module('myApp.Home', ['ngRoute','ngResource'])
 
 .controller('HomeCtrl', function($scope, Community, $http) {
 
-    var test = [];
-        
+     var test = [];    
    test = Community.query();
    $scope.history = test;
-    $scope.myvar = new Date(); 
+  
+    //news
+   $scope.myvar = new Date(); 
    $http.get("http://localhost:4000/tweeter/news")
    .then(function(response) {
         $scope.news = response.data;
