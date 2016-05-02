@@ -1,0 +1,153 @@
+            <!-- Section Title -->           
+            <section class="section-title img-communityprofile">
+                 <div class="overlay-bg"></div>
+                <div class="container">
+                    <h1>{{community.name}} Community</h1>
+                </div>
+            </section>
+            <!-- End Section Title -->
+
+
+            <!-- Section Area - Content Central -->
+            <section class="content-info">
+                
+                <!-- Menu-->
+                <div class="crumbs">
+                     <nav class="mainmenu">
+                    <div class="container">
+                        
+                        <ul class="sf-menu" id="menu">
+                            <li class="selected">
+                                <a href="#/communityProfile/{{community._id}}">Team</a>
+                            </li>                                
+                            <li class="current">
+                                <a href="#/calandar/{{community._id}}">Calandar</a>   
+                            </li>
+                            <li class="current">
+                                <a href="#/teams&communities/{{community._id}}">Teams/Communities</a> 
+                            </li> 
+                            <li class="current">
+                                 <a href="#/invitations/{{community._id}}">Invitations</a>
+                            </li>
+                            <li class="current">
+                                 <a href="#/communityProfile/{{community._id}}/news">News</a>
+                            </li>  
+                        </ul>
+                       
+                    </div>
+                </nav>
+                </div>
+                 <!-- End Menu-->
+                
+                
+                <div class="semiboxshadow text-center">
+                    <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+                    
+                </div>
+
+                <!-- Content Central -->
+                <div class="container padding-top">
+                    <div class="row">
+                        
+                        <!-- content Players --> 
+                        <div class="col-md-12">                     
+                            <!-- Panel Box -->
+                            <div class="panel-box">
+                                <div class="titles">
+                                    <h4><i class="fa fa-group"></i></h4>
+                                </div>
+                                <!-- Players --> 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <!-- Item Players-->  
+                                        <div class="widget-container">
+                                         
+                                                      <div >
+                                 <table id="comunityprofilecontent">
+                                     <tr>
+                                        <td  class="lbl">Name:</td>
+                                        <td class="lblcontent">{{community.name}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">Slug:</td>
+                                        <td class="lblcontent">{{community.slug}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">Description:</td>
+                                        <td class="lblcontent">{{community.description}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">Members:</td>
+                                        <td>
+                                         <div class="table-responsive">
+                            <table class="table table-striped table-hover matmix-dt">
+                                <thead>
+                                    <tr>
+                                        <th><h5>FirstName</h5></th>
+                                        <th><h5>LastName</h5></th>
+                                        <th><h5>Nickname</h5></th>
+                                        <th>
+                                            <div class="btn-toolbar" role="toolbar">
+                                            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo"><i><img src="img/icons/addFreind.png"></i></button>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="m in community.members" style="font-size:13px">
+                                        <td>{{m.first_name}}</td>
+                                        <td class="tc-center">{{m.last_name}}</td>
+                                        <td class="tc-center">{{m.email}}</td>
+                                       <!-- <td class="tc-center">
+                                            <div class="btn-toolbar" role="toolbar">
+                                            <a type="button" class="btn btn-default"  href="MemberProfile.html"><i><img src="img/icons/showUser.png"></i></a>
+                                            </div>
+                                        </td>-->  
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+  
+                                        </td>
+                                     </tr>
+                                </table>
+                                    </div>
+                                        </div>
+                                    <div id="demo" class="collapse">
+                                    <center> <div id="freinds">
+                                       <ul class="list-group">
+                                          <li ng-repeat="u in users" class="list-group-item">
+                                              {{u.first_name}} {{u.last_name}}
+                                           <center>
+                                               <button ng-click="invite(u.email)" class="btn btn-default"><img src="img/icons/email.png">email</button>
+                                               <a href="#/invite/{{u._id}}" class="btn btn-default"><i class="fa fa-envelope" aria-hidden="true"></i> message</a></center>
+                                           </li>
+                                           
+                                       </ul>
+                                        </div> </center>
+                                     </div>
+            
+                                        <!-- End Item Players-->  
+                                    </div>
+                                </div>
+                                <!-- End Players -->                                
+                            </div>  
+                            <!-- End Panel Box --> 
+
+
+
+            </div>
+                        </div>
+                        <!-- End Players -->
+
+
+                     
+                    </div>    
+                
+                <!--list news--> 
+              
+               <!-- end list news-->
+
+
+            </section>
+
