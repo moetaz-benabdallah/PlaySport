@@ -1,0 +1,86 @@
+            <!-- Section Title -->           
+<section class="section-title img-communityprofile">
+    <div class="overlay-bg"></div>
+        <div class="container">
+            <h1>About Communities</h1>
+        </div>
+</section>
+    
+<section class="content-info">
+    <div class="semiboxshadow text-center">
+        <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+    </div>
+    <!--central content-->
+    <div class="container padding-top">
+        <div class="row">
+            <!-- content Players -->
+            <div class="col-md-12">
+                <!-- Panel Box -->
+                <div class="panel-box">
+                    <div class="titles">
+                        <h4><i class="fa fa-group"></i>Available Communities</h4>
+                    </div>
+                    <div id="BTNbuildcommunity">
+                        <button data-toggle="collapse" data-target="#demo" class="btn btn-info">Buil community</button>
+                    </div>
+                    <!--FORM build community-->
+                    <div id="demo" class="collapse">
+                        <div id="Formbuildcommunity">
+                        <form ng-submit="newCommunity()" role="form">
+                            <div class="form-group">
+                                <label for="title">Name:</label>
+                                <input ng-model="communityData.name" type="text" class="form-control" id="title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Slug:</label>
+                                <input ng-model="communityData.slug" type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="content">Description:</label>
+                                <textarea ng-model="communityData.description" class="form-control" rows="6" id="content" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>is it a community?</label>
+                                <div class="radio">
+                                    <label><input type="radio" id="c1" name="optradio" ng-model="communityData.is_community" required>yes</label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" id="c2" name="optradio" ng-model="communityData.is_community">no</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                          
+                            <a href="#/communityProfile/{{community._id}}">See your profile</a>
+                        </div>
+                         
+                    </div>
+                    <!--END form build community-->
+                    <!--LIST of communities-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div ng-repeat="c in communities" class="panel-box">
+                                <div class="titles">
+                                    <h4>{{c.name}} Community</h4>
+                                </div>
+                                <div class="row">
+                                    <div  class="col-md-12">
+                                        <h5>{{c.slug}}</h5>
+                                        <p>{{c.description}}</p>
+                                        <div id="actions">
+                                            <a href="#/community/{{c._id}}"><i class="fa fa-plus" aria-hidden="true"></i> see more</a>
+                                            <!--<a href="#/invite/{{c._id}}" class="btn btn-success"><i class="fa fa-envelope" aria-hidden="true"></i> invite</a>-->
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                             {{community._id}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
