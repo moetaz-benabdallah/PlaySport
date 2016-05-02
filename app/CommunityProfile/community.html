@@ -1,0 +1,152 @@
+            <!-- Section Title -->           
+            <section class="section-title img-communityprofile">
+                <div class="overlay-bg"></div>
+                <div class="container">
+                    <h1>{{community.name}} Community</h1>
+                </div>
+            </section>
+            <!-- End Section Title -->
+
+
+            <!-- Section Area - Content Central -->
+            <section class="content-info">
+                
+            
+                
+                
+                <div class="semiboxshadow text-center">
+                    <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+                </div>
+
+                <!-- Content Central -->
+                <div class="container padding-top">
+                    <div class="row">
+                        
+                        <!-- content Players --> 
+                        <div class="col-md-12">                     
+                            <!-- Panel Box -->
+                            <div class="panel-box">
+                                <div class="titles">
+                                     <a href="#/communities"> <img src="img/icons/Return.png">go back</a>
+                                </div>
+                                <!-- Players --> 
+                                <div class="row">
+                                   
+                                <div >
+                                 <table id="comunityprofilecontent">
+                                     <tr>
+                                        <td  class="lbl">Name:</td>
+                                        <td class="lblcontent">{{community.name}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">Slug:</td>
+                                        <td class="lblcontent">{{community.slug}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">Description:</td>
+                                        <td class="lblcontent">{{community.description}}</td>
+                                     </tr>
+                                      <tr>
+                                        <td class="lbl">Members:</td>
+                                        <td>
+                                         <div class="table-responsive">
+                            <table class="table table-striped table-hover matmix-dt">
+                                <thead>
+                                    <tr>
+                                        <th><h5>FirstName</h5></th>
+                                        <th><h5>LastName</h5></th>
+                                        <th><h5>Nickname</h5></th>
+                                      <!--  <th>
+                                            <div class="btn-toolbar" role="toolbar">
+                                            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo"><i><img src="img/icons/addUser.png"></i></button>
+                                            </div>
+                                        </th>-->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="m in community.members" style="font-size:13px">
+                                        <td>{{m.first_name}}</td>
+                                        <td class="tc-center">{{m.last_name}}</td>
+                                        <td class="tc-center">{{m.email}}</td>
+                                        <td class="tc-center">
+                                            <div class="btn-toolbar" role="toolbar">
+                                            <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i><img src="img/icons/editUser.png"></i></button>&nbsp;-->
+                                            <a type="button" class="btn btn-default"  href="MemberProfile.html"><i><img src="img/icons/showUser.png"></i></a>
+                                            </div>
+                                        </td>  
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+  
+                                        </td>
+                                     </tr>
+                                </table>
+                                    </div>
+                                   
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="col-md-12">
+                                        <!-- Item Players-->  
+                                        <div class="widget-container">
+                <!--        <div class="table-responsive">
+                            <table class="table table-striped table-hover matmix-dt">
+                                <thead>
+                                    <tr>
+                                        <th><h5>FirstName</h5></th>
+                                        <th><h5>LastName</h5></th>
+                                        <th><h5>Nickname</h5></th>
+                                        <th><h5>Role</h5></th>
+                                        <th>
+                                            <div class="btn-toolbar" role="toolbar">
+                                            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo"><i><img src="img/icons/addUser.png"></i></button>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="font-size:13px">
+                                        <td>Haifa</td>
+                                        <td class="tc-center">Kadri</td>
+                                        <td class="tc-center">lionheart</td>
+                                        <td class="tc-center">Player</td>
+                                        <td class="tc-center">
+                                            <div class="btn-toolbar" role="toolbar">
+                                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i><img src="img/icons/editUser.png"></i></button>&nbsp;
+                                            <a type="button" class="btn btn-default"  href="MemberProfile.html"><i><img src="img/icons/showUser.png"></i></a>
+                                            </div>
+                                        </td>  
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>-->
+                    </div>
+
+                                    </div>
+                                </div>
+                                <!-- End Players -->                                
+                            </div>  
+                            <!-- End Panel Box --> 
+
+                  
+
+            </div>
+                        </div>
+                        <!-- End Players -->
+
+
+                     
+                    </div>                     
+                </div> 
+<!--<div ng-repeat="h in history">
+{{h.text}}
+</div>-->
+<!-- End Content Central -->
+
+            </section>
+
